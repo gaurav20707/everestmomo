@@ -1,0 +1,335 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+  </head>
+
+  <nav class="navbar bg-body-tertiary fixed-top" style="padding: 16px; z-index: 100;">
+    <div class="container-fluid">
+      
+      <a href="{% url 'home'  %}" class="momo" style="text-decoration: none;">
+        <img src="{% static 'images/momo.png'%}" alt="Logo image of Everest Momo">momos</a>
+
+      <div class="nav-menu">
+        <a href="{% url 'aboutus'  %}" class="text-decoration-none text-secondary">About Us</a>
+        <a href="{% url 'menu'  %}" class="text-decoration-none text-secondary">Our Menu</a>
+        <a href="{% url 'services'  %}" class="text-decoration-none text-secondary">Our Services</a>
+        <a href="{% url 'advices'  %}" class="text-decoration-none text-secondary">Allergy Advice</a>
+      </div>
+      
+      <div class="navbar-nav flex-row">
+        <li class="nav-item">
+          <a class="nav-link px-2" href="#!">
+            <i class="fab fa-facebook-square" ><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+              <rect width="32" height="32" rx="16" fill="#A6AEBB"/>
+              <path d="M20.0553 17.0874L20.539 13.7346H17.5131V11.5589C17.5131 10.6417 17.9358 9.74758 19.2911 9.74758H20.6668V6.89321C20.6668 6.89321 19.4183 6.66668 18.2246 6.66668C15.7325 6.66668 14.1037 8.27237 14.1037 11.1793V13.7346H11.3335V17.0874H14.1037V25.1924C14.6591 25.2851 15.2284 25.3333 15.8084 25.3333C16.3883 25.3333 16.9576 25.2851 17.5131 25.1924V17.0874H20.0553Z" fill="white"/>
+            </svg></i>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link px-2" href="#!">
+            <i class="fab fa-tiktok"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+              <rect width="32" height="32" rx="16" fill="#A6AEBB"/>
+              <path d="M21.6101 10.4082C20.6216 9.75272 19.9088 8.70343 19.686 7.4809C19.6382 7.21682 19.6115 6.94478 19.6115 6.66666H16.4572L16.4522 19.5278C16.3992 20.9681 15.234 22.1241 13.806 22.1241C13.3619 22.1241 12.944 22.0113 12.5758 21.8142C11.7318 21.3623 11.1543 20.4624 11.1543 19.4267C11.1543 17.9391 12.3439 16.7288 13.8055 16.7288C14.0784 16.7288 14.3403 16.7747 14.5879 16.8533V13.5772C14.3315 13.5416 14.071 13.5196 13.8055 13.5196C10.6043 13.5196 8 16.1693 8 19.4267C8 21.4251 8.98116 23.1935 10.4787 24.263C11.4216 24.9367 12.5689 25.3333 13.806 25.3333C17.0072 25.3333 19.6115 22.6836 19.6115 19.4267V12.9048C20.8485 13.808 22.3644 14.3404 24 14.3404V11.1312C23.1192 11.1312 22.2986 10.8647 21.6101 10.4082Z" fill="white"/>
+            </svg></i>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link ps-2" href="#!">
+            <i class="fab fa-instagram" style="display: flex;
+            width: 32px;
+            height: 32px;
+            padding: 8px 8px 7.333px 8px;
+            justify-content: center;
+            align-items: center; border-radius: 100px;
+            background: var(--neutral-n-70, #A6AEBB);"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
+              <g clip-path="url(#clip0_1840_1597)">
+                <path d="M4.70349 0.0988934C3.85651 0.140535 3.27802 0.281852 2.77251 0.488184C2.24921 0.700689 1.80561 0.985479 1.36433 1.44703C0.922524 1.90886 0.651202 2.37176 0.448749 2.91741C0.252733 3.44533 0.119906 4.04821 0.0825045 4.93102C0.0453702 5.81546 0.0368544 6.09755 0.0409937 8.3492C0.045117 10.6006 0.0546566 10.8832 0.0951453 11.7679C0.135632 12.6499 0.27079 13.2523 0.468867 13.7791C0.673131 14.3242 0.946248 14.786 1.38959 15.246C1.83269 15.7059 2.27733 15.9883 2.8014 16.1995C3.30768 16.4034 3.88669 16.5423 4.73394 16.581C5.58298 16.6199 5.85403 16.6285 8.01507 16.6242C10.1771 16.6199 10.4482 16.61 11.2973 16.5681C12.1442 16.5259 12.7222 16.3846 13.2282 16.1788C13.7515 15.9655 14.1951 15.6815 14.6364 15.2197C15.0777 14.7581 15.349 14.2949 15.5515 13.749C15.7475 13.2216 15.8808 12.6185 15.9177 11.7365C15.9549 10.8515 15.9636 10.5689 15.9595 8.31749C15.9554 6.06585 15.9456 5.78375 15.9053 4.8996C15.8651 4.01678 15.7295 3.41471 15.5316 2.88759C15.3271 2.34248 15.0542 1.88092 14.6111 1.42071C14.1681 0.961029 13.7234 0.677857 13.1993 0.467499C12.6928 0.263315 12.1141 0.124145 11.2668 0.0859962C10.4178 0.0467723 10.1467 0.0381803 7.9849 0.0424771C5.8236 0.046774 5.55255 0.0564489 4.70349 0.0988934ZM4.79635 15.0886C4.02029 15.0534 3.59887 14.919 3.31801 14.8065C2.9461 14.6565 2.68071 14.4768 2.40139 14.188C2.12259 13.8981 1.94952 13.6225 1.80432 13.2359C1.69522 12.9433 1.56395 12.5048 1.52758 11.6964C1.48812 10.8225 1.4791 10.5603 1.47523 8.34624C1.4711 6.13275 1.47883 5.87053 1.51546 4.99578C1.54873 4.18791 1.67847 3.74838 1.78627 3.45608C1.93018 3.06813 2.1022 2.79221 2.37998 2.50126C2.65826 2.2103 2.92287 2.03056 3.29427 1.87931C3.57488 1.76512 3.99579 1.62945 4.77159 1.59104C5.61109 1.54966 5.86255 1.5408 7.98748 1.5365C10.1129 1.53219 10.3646 1.53999 11.2044 1.57841C11.9799 1.6136 12.4019 1.7474 12.6822 1.8605C13.0544 2.01041 13.3198 2.18907 13.5988 2.47896C13.8779 2.76885 14.051 3.04395 14.1962 3.43163C14.3058 3.72312 14.436 4.16212 14.4727 4.96998C14.5126 5.84447 14.5217 6.10668 14.5255 8.32018C14.5296 10.5342 14.5219 10.7964 14.485 11.6706C14.4512 12.479 14.3225 12.9183 14.2142 13.2111C14.0703 13.5983 13.8983 13.8747 13.6202 14.1657C13.3422 14.4556 13.0776 14.6364 12.706 14.7876C12.4259 14.9016 12.0044 15.0375 11.2292 15.0759C10.3897 15.117 10.1382 15.1264 8.01249 15.1305C5.88756 15.1348 5.6361 15.1264 4.79635 15.0886ZM11.2857 3.90098C11.2867 4.45013 11.7153 4.89476 12.2425 4.89369C12.7699 4.89261 13.1968 4.44636 13.196 3.89722C13.195 3.34808 12.7663 2.90318 12.2389 2.90426C11.7115 2.90533 11.2846 3.35184 11.2857 3.90098ZM3.91301 8.3414C3.91739 10.693 5.75088 12.5951 8.00785 12.5905C10.2651 12.586 12.0921 10.6766 12.0877 8.32502C12.0834 5.97424 10.2496 4.07104 7.99212 4.07561C5.73513 4.08018 3.90862 5.99036 3.91301 8.3414ZM5.34673 8.33845C5.34415 6.81219 6.53002 5.57232 7.99496 5.56963C9.46016 5.56668 10.6507 6.80144 10.6535 8.32797C10.6563 9.85451 9.47047 11.0941 8.00502 11.0971C6.54008 11.1 5.34956 9.86498 5.34673 8.33845Z" fill="white"/>
+              </g>
+              <defs>
+                <clipPath id="clip0_1840_1597">
+                  <rect width="16" height="16.6667" fill="white"/>
+                </clipPath>
+              </defs>
+            </svg></i>
+          </a>
+        </li>
+        <a class="btn btn-primary rounded-pill border border-0" href="{% url 'contact'  %}" role="button">Contact Us</a>
+      </div>
+    </div>
+  </nav>
+
+{% block content %}
+
+  <body> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  </body>
+
+  {% endblock %}
+
+    
+
+  <footer class="text-center" 
+  style="display: flex; 
+  width: 100%;
+  flex-direction: column; 
+  align-items: flex-start; 
+  border-top: 1px solid var(--neutral-n-50, #C2C7D0);
+  display: flex;
+  padding: 56px 90px;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  align-self: stretch;background: var(--neutral-n-10, #FAFBFB);">
+    <!-- Grid container -->
+    <div class="container p-4 pb-0">
+      <!-- Section: Links -->
+      <section class="footer-section" style="display: flex;
+      align-items: flex-start;
+      gap: 120px;
+      align-self: stretch;">
+        <!--Grid row-->
+        <div class="row">
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+            <h6 class="logo" style="color: var(--secondary-secondary-6, #0C6967);
+
+            /* Heading Style/H4 */
+            font-family: Proxima Nova;
+            font-size: 25px;
+            font-style: normal;
+            margin-right:130px;
+            font-weight: 700;
+            line-height: 130%; /* 37.2px */"><img src="{% static 'images/momo.png'%}">
+              momos
+            </h6>
+            <p style="align-self: stretch;
+            color: var(--neutral-n-200, #6B788E);
+            /* Paragraph/Regular */
+            font-family: Inter;
+            font-size: 16px;
+            font-style: normal;
+            text-align:left;
+            font-weight: 400;
+            line-height: 180%; /* 28.8px */">
+              Here you can use rows and columns to organize your footer
+              content. Lorem ipsum dolor sit amet, consectetur adipisicing
+              elit.
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <hr class="w-100 clearfix d-md-none" style=display:flex;
+          align-items: flex-start;
+          gap: 48px;/>
+
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3" style="display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 12px;
+          align-self: stretch;">
+            <h6 class="text mb-4 font-weight-bold" style="display: flex;
+            width: 168px;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 16px; color: var(--secondary-secondary-6, #0C6967);
+
+            /* Heading Style/H5 */
+            font-family: Proxima Nova;
+            font-size: 25px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 120%; /* 30px */">momos</h6>
+            
+            <p style="display: flex;
+            align-items: center;
+            gap: 8px;">
+              <a class="text-black">Product</a>
+            </p>
+            <p>
+              <a class="text-black">Our Menu</a>
+            </p>
+            <p>
+              <a class="text-black">Our Services</a>
+            </p>
+            <p>
+              <a class="text-black">Contact Us</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <hr class="w-100 clearfix d-md-none" />
+
+          <!-- Grid column -->
+          <hr class="w-100 clearfix d-md-none" />
+
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3" style="display: flex;
+          width: 168px;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 16px;">
+            <h6 class="text mb-4 font-weight-bold" style="color: var(--secondary-secondary-6, #0C6967);
+
+            /* Heading Style/H5 */
+            font-family: Proxima Nova;
+            font-size: 25px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 120%; /* 30px */">Legals</h6>
+            <p style="display: flex;
+            align-items: center;color: var(--off-color-off-black-1, #252D43);
+
+            /* Base/Regular */
+            font-family: Inter;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 120%; /* 19.2px */"><i class="fas fa-home mr-3"></i> Terms & Conditions</p>
+            <p style="display: flex;
+            align-items: center;color: var(--off-color-off-black-1, #252D43);
+
+            /* Base/Regular */
+            font-family: Inter;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 120%; /* 19.2px */"><i class="fas fa-envelope mr-3"></i> Privacy Policy</p>
+            <p style="display: flex;
+            align-items: center;color: var(--off-color-off-black-1, #252D43);
+
+            /* Base/Regular */
+            font-family: Inter;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 120%; /* 19.2px */"><i class="fas fa-phone mr-3"></i> Support</p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3" style="display: flex;
+          width: 168px;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 16px;">
+            <h6 class="follow mb-4 font-weight-bold" style="color: var(--secondary-secondary-6, #0C6967);
+
+            /* Heading Style/H5 */
+            font-family: Proxima Nova;
+            font-size: 25px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 120%; /* 30px */">Follow Us</h6>
+
+              <div class="frame1" style="display: flex; align-items: center; gap: 7px; align-self: stretch;">
+              <!-- Facebook -->
+              <a class="nav-link px-2" href="#!">
+                <i class="fab fa-facebook-square" ><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 32 32" fill="none">
+                  <rect width="32" height="32" rx="16" fill="#A6AEBB"/>
+                  <path d="M20.0553 17.0874L20.539 13.7346H17.5131V11.5589C17.5131 10.6417 17.9358 9.74758 19.2911 9.74758H20.6668V6.89321C20.6668 6.89321 19.4183 6.66668 18.2246 6.66668C15.7325 6.66668 14.1037 8.27237 14.1037 11.1793V13.7346H11.3335V17.0874H14.1037V25.1924C14.6591 25.2851 15.2284 25.3333 15.8084 25.3333C16.3883 25.3333 16.9576 25.2851 17.5131 25.1924V17.0874H20.0553Z" fill="white"/>
+                </svg></i>
+              </a>
+
+              <!-- Linkedin -->
+              <a class="nav-link px-2" href="#!">
+                <i class="fab fa-linkedin-square" ><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                  <rect width="40" height="40" rx="20" fill="#A6AEBB"/>
+                  <path d="M14.1973 12.9641C14.197 13.5289 13.9756 14.0704 13.5819 14.4696C13.1881 14.8687 12.6542 15.0928 12.0976 15.0925C11.541 15.0922 11.0073 14.8676 10.6139 14.468C10.2206 14.0685 9.99972 13.5267 10 12.9619C10.0003 12.3972 10.2217 11.8556 10.6154 11.4565C11.0092 11.0573 11.5431 10.8332 12.0997 10.8335C12.6563 10.8338 13.19 11.0584 13.5833 11.458C13.9767 11.8575 14.1976 12.3993 14.1973 12.9641ZM14.2602 16.6694H10.063V30.0002H14.2602V16.6694ZM20.8919 16.6694H16.7156V30.0002H20.8499V23.0047C20.8499 19.1077 25.8552 18.7457 25.8552 23.0047V30.0002H30V21.5567C30 14.9871 22.5918 15.232 20.8499 18.4582L20.8919 16.6694Z" fill="white"/>
+                </svg></i>
+              </a>
+
+              <!-- twitter -->
+              <a class="nav-link ps-2" href="#!">
+                <i class="fab fa-instagram" style="display: flex;
+                width: 40px;
+                height: 40px;
+                padding: 11.667px 10px;
+                justify-content: center;
+                align-items: center; border-radius: 100px;
+                background: var(--neutral-n-70, #A6AEBB);"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="18" viewBox="0 0 20 18" fill="none">
+                  <g clip-path="url(#clip0_1885_1188)">
+                    <path d="M17.8991 4.85709C17.9112 5.03438 17.9112 5.21166 17.9112 5.39058C17.9112 10.8424 13.8144 17.13 6.32331 17.13V17.1267C4.11041 17.13 1.94347 16.4878 0.0805664 15.277C0.402341 15.3162 0.725728 15.3358 1.04992 15.3367C2.88379 15.3383 4.66524 14.7149 6.10799 13.5671C4.36524 13.5336 2.83702 12.3824 2.30315 10.7019C2.91363 10.8211 3.54266 10.7966 4.14186 10.6308C2.24186 10.2419 0.874921 8.55071 0.874921 6.58666C0.874921 6.56869 0.874921 6.55153 0.874921 6.53438C1.44105 6.85382 2.07492 7.03111 2.72331 7.05071C0.933792 5.83911 0.382179 3.42735 1.46282 1.54173C3.53057 4.11934 6.58137 5.68634 9.85637 5.85219C9.52815 4.41918 9.97653 2.91755 11.0346 1.91019C12.6749 0.3481 15.2548 0.428166 16.7967 2.08911C17.7088 1.90692 18.583 1.56787 19.383 1.08748C19.079 2.04254 18.4427 2.85382 17.5927 3.36934C18.3999 3.27294 19.1886 3.05398 19.9314 2.71983C19.3846 3.5499 18.6959 4.27294 17.8991 4.85709Z" fill="white"/>
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_1885_1188">
+                      <rect width="20" height="16.6667" fill="white" transform="translate(0 0.666504)"/>
+                    </clipPath>
+                  </defs>
+                </svg></i>
+              </a>
+              
+            </div>
+
+            <div class="frame2" style="display: flex;
+            align-items: center;
+            gap: 16px;
+            align-self: stretch;">
+              <!-- youtube -->
+              <a class="nav-link ps-2" href="#!">
+                <i class="fab fa-instagram" style="display: flex;
+                width: 40px;
+                height: 40px;
+                padding: 11.667px 10px;
+                justify-content: center;
+                align-items: center; border-radius: 100px;
+                background: var(--neutral-n-70, #A6AEBB);"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="16" viewBox="0 0 22 16" fill="none">
+                  <g clip-path="url(#clip0_1885_1193)">
+                    <path d="M21.3804 2.8423C21.1312 1.92028 20.3971 1.19423 19.4649 0.947824C17.7752 0.500001 10.9998 0.5 10.9998 0.5C10.9998 0.5 4.22449 0.500001 2.53481 0.947824C1.60261 1.19423 0.8684 1.92028 0.619255 2.8423C0.166504 4.51338 0.166504 8 0.166504 8C0.166504 8 0.166504 11.4866 0.619255 13.1578C0.8684 14.0797 1.60261 14.8058 2.53481 15.0523C4.22449 15.5 10.9998 15.5 10.9998 15.5C10.9998 15.5 17.7752 15.5 19.4649 15.0523C20.3971 14.8058 21.1312 14.0797 21.3804 13.1578C21.8332 11.4866 21.8332 8 21.8332 8C21.8332 8 21.8332 4.51338 21.3804 2.8423Z" fill="white"/>
+                    <path d="M8.78369 11.1655L14.4466 8.0001L8.78369 4.83438V11.1655Z" fill="#A6AEBB"/>
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_1885_1193">
+                      <rect width="21.6667" height="15" fill="white" transform="translate(0.166504 0.5)"/>
+                    </clipPath>
+                  </defs>
+                </svg></i>
+              </a>
+
+              <!-- instagram -->
+              <a class="nav-link ps-2" href="#!">
+                <i class="fab fa-instagram" style="display: flex;
+                width: 40px;
+                height: 40px;
+                padding: 10px 10px 9.167px 10px;
+                justify-content: center;
+                align-items: center; border-radius: 100px;
+                background: var(--neutral-n-70, #A6AEBB);"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
+                  <g clip-path="url(#clip0_1840_1597)">
+                    <path d="M4.70349 0.0988934C3.85651 0.140535 3.27802 0.281852 2.77251 0.488184C2.24921 0.700689 1.80561 0.985479 1.36433 1.44703C0.922524 1.90886 0.651202 2.37176 0.448749 2.91741C0.252733 3.44533 0.119906 4.04821 0.0825045 4.93102C0.0453702 5.81546 0.0368544 6.09755 0.0409937 8.3492C0.045117 10.6006 0.0546566 10.8832 0.0951453 11.7679C0.135632 12.6499 0.27079 13.2523 0.468867 13.7791C0.673131 14.3242 0.946248 14.786 1.38959 15.246C1.83269 15.7059 2.27733 15.9883 2.8014 16.1995C3.30768 16.4034 3.88669 16.5423 4.73394 16.581C5.58298 16.6199 5.85403 16.6285 8.01507 16.6242C10.1771 16.6199 10.4482 16.61 11.2973 16.5681C12.1442 16.5259 12.7222 16.3846 13.2282 16.1788C13.7515 15.9655 14.1951 15.6815 14.6364 15.2197C15.0777 14.7581 15.349 14.2949 15.5515 13.749C15.7475 13.2216 15.8808 12.6185 15.9177 11.7365C15.9549 10.8515 15.9636 10.5689 15.9595 8.31749C15.9554 6.06585 15.9456 5.78375 15.9053 4.8996C15.8651 4.01678 15.7295 3.41471 15.5316 2.88759C15.3271 2.34248 15.0542 1.88092 14.6111 1.42071C14.1681 0.961029 13.7234 0.677857 13.1993 0.467499C12.6928 0.263315 12.1141 0.124145 11.2668 0.0859962C10.4178 0.0467723 10.1467 0.0381803 7.9849 0.0424771C5.8236 0.046774 5.55255 0.0564489 4.70349 0.0988934ZM4.79635 15.0886C4.02029 15.0534 3.59887 14.919 3.31801 14.8065C2.9461 14.6565 2.68071 14.4768 2.40139 14.188C2.12259 13.8981 1.94952 13.6225 1.80432 13.2359C1.69522 12.9433 1.56395 12.5048 1.52758 11.6964C1.48812 10.8225 1.4791 10.5603 1.47523 8.34624C1.4711 6.13275 1.47883 5.87053 1.51546 4.99578C1.54873 4.18791 1.67847 3.74838 1.78627 3.45608C1.93018 3.06813 2.1022 2.79221 2.37998 2.50126C2.65826 2.2103 2.92287 2.03056 3.29427 1.87931C3.57488 1.76512 3.99579 1.62945 4.77159 1.59104C5.61109 1.54966 5.86255 1.5408 7.98748 1.5365C10.1129 1.53219 10.3646 1.53999 11.2044 1.57841C11.9799 1.6136 12.4019 1.7474 12.6822 1.8605C13.0544 2.01041 13.3198 2.18907 13.5988 2.47896C13.8779 2.76885 14.051 3.04395 14.1962 3.43163C14.3058 3.72312 14.436 4.16212 14.4727 4.96998C14.5126 5.84447 14.5217 6.10668 14.5255 8.32018C14.5296 10.5342 14.5219 10.7964 14.485 11.6706C14.4512 12.479 14.3225 12.9183 14.2142 13.2111C14.0703 13.5983 13.8983 13.8747 13.6202 14.1657C13.3422 14.4556 13.0776 14.6364 12.706 14.7876C12.4259 14.9016 12.0044 15.0375 11.2292 15.0759C10.3897 15.117 10.1382 15.1264 8.01249 15.1305C5.88756 15.1348 5.6361 15.1264 4.79635 15.0886ZM11.2857 3.90098C11.2867 4.45013 11.7153 4.89476 12.2425 4.89369C12.7699 4.89261 13.1968 4.44636 13.196 3.89722C13.195 3.34808 12.7663 2.90318 12.2389 2.90426C11.7115 2.90533 11.2846 3.35184 11.2857 3.90098ZM3.91301 8.3414C3.91739 10.693 5.75088 12.5951 8.00785 12.5905C10.2651 12.586 12.0921 10.6766 12.0877 8.32502C12.0834 5.97424 10.2496 4.07104 7.99212 4.07561C5.73513 4.08018 3.90862 5.99036 3.91301 8.3414ZM5.34673 8.33845C5.34415 6.81219 6.53002 5.57232 7.99496 5.56963C9.46016 5.56668 10.6507 6.80144 10.6535 8.32797C10.6563 9.85451 9.47047 11.0941 8.00502 11.0971C6.54008 11.1 5.34956 9.86498 5.34673 8.33845Z" fill="white"/>
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_1840_1597">
+                      <rect width="16" height="16.6667" fill="white"/>
+                    </clipPath>
+                  </defs>
+                </svg></i>
+              </a>
+
+
+              <!-- tiktok -->
+              <a class="nav-link px-2" href="#!">
+                <i class="fab fa-tiktok"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                  <rect width="40" height="40" rx="20" fill="#A6AEBB"/>
+                  <path d="M27.0127 13.0105C25.777 12.1911 24.886 10.8795 24.6075 9.3513C24.5477 9.0212 24.5143 8.68115 24.5143 8.3335H20.5715L20.5652 24.4099C20.499 26.2103 19.0425 27.6553 17.2575 27.6553C16.7023 27.6553 16.18 27.5143 15.7198 27.2679C14.6648 26.7031 13.9428 25.5782 13.9428 24.2835C13.9428 22.4241 15.4299 20.9111 17.2569 20.9111C17.598 20.9111 17.9253 20.9685 18.2348 21.0668V16.9716C17.9144 16.9272 17.5888 16.8996 17.2569 16.8996C13.2554 16.8996 10 20.2117 10 24.2835C10 26.7815 11.2265 28.9921 13.0983 30.3289C14.277 31.1711 15.7112 31.6668 17.2575 31.6668C21.259 31.6668 24.5143 28.3547 24.5143 24.2835V16.1312C26.0606 17.2602 27.9555 17.9256 30 17.9256V13.9141C28.899 13.9141 27.8733 13.5811 27.0127 13.0105Z" fill="white"/>
+                  </svg></i>
+              </a>
+              </div>
+            </div>
+          </div>
+        <!--Grid row-->
+      </section>
+      <!-- Section: Links -->
+    </div>
+    <!-- Grid container -->
+  </footer>
+  <!-- Footer -->
+
+</html>

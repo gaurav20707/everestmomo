@@ -1,0 +1,120 @@
+.container1{
+    margin-top: 261px;
+    margin-left: 130PX; 
+    margin-bottom: 6000px;
+}
+
+.card1{
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 48px;
+    height: auto 348px;
+    border: black;
+}
+
+.card-body{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.the{
+    color: var(--off-color-off-black, #101828);
+
+    /* Heading Style/H1 */
+    font-family: Proxima Nova;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%; /* 73.2px */
+}
+
+.one{
+    color: var(--neutral-n-0, #FFF);
+
+    /* Heading Style/H1 */
+    font-family: Proxima Nova;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%; /* 73.2px */
+    background-image: url('/static/images/bg.png');
+}
+
+.mom{
+    color: var(--off-color-off-black, #101828);
+
+    /* Heading Style/H1 */
+    font-family: Proxima Nova;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%; /* 73.2px */
+    }
+
+.restro{
+    color: var(--primary-primary-6, #D95103);
+    /* Heading Style/H1 */
+    font-family: Proxima Nova;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+}
+
+.word-vari{
+    color: var(--primary-primary-6, #D95103);
+
+    /* Heading Style/H5 */
+    font-family: Proxima Nova;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%; /* 30px */
+}
+
+.word-more{
+    color: var(--off-color-off-black-1, #252D43);
+
+    /* Heading Style/H6 */
+    font-family: Proxima Nova;
+    font-size: 20.5px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%; /* 24px */
+}
+
+.button1{
+    text-decoration: none;
+    width: auto 259px;
+    height: auto 64px;
+    display: flex;
+    padding: 20px 30px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 100px;
+    background: var(--secondary-secondary-6, #0C6967);  
+    color: var(--neutral-n-0, #FFF);
+    text-align: center;
+    margin-right: 50px;
+
+    /* Base/Medium */
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%; /* 19.2px */
+}
+
+.momobanner{
+    margin-left: 600px;
+    margin-top: -330px;
+}
+
+
+
+
+
